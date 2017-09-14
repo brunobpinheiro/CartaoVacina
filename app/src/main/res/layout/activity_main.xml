@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neri.alexa.cartaovacina.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="415dp"
+        app:srcCompat="@drawable/zegotinha"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <LinearLayout
+        android:id="@+id/Relative"
+        android:layout_width="398dp"
+        android:layout_height="97dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="411dp">
+
+        <Button
+            android:id="@+id/buttonTelaCartao"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cartões"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="377dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
