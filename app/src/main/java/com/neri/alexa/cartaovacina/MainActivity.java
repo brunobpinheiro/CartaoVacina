@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,16 +14,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        Button  buttonCartao =  (Button) findViewById(R.id.buttonTelaCartao);
-        buttonCartao.setOnClickListener(this);
+        Button btnTelaCadastro =  (Button) findViewById(R.id.buttonCadastro);
+
+        btnTelaCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CadastroActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
-    public void onClick(View v){
-
-        Intent it = new Intent (this, CadastroActivity.class);
-        startActivity(it);
-
-    }
-
 }

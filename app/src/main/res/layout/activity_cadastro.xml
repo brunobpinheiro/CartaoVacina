@@ -6,77 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.neri.alexa.cartaovacina.CadastroActivity">
 
-    <TextView
-        android:id="@+id/textViewNome"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:text="Nome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="16dp" />
-
     <EditText
-        android:id="@+id/editText8"
-        android:layout_width="334dp"
-        android:layout_height="47dp"
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
         android:ems="10"
-        android:inputType="none|textPersonName"
+        android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="59dp" />
-
-    <TextView
-        android:id="@+id/textFone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fone"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="222dp" />
-
-    <EditText
-        android:id="@+id/editTextfone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="222dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextEmail"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="43dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText11"
-        android:layout_width="326dp"
-        android:layout_height="43dp"
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteY="152dp"
-        tools:layout_editor_absoluteX="32dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         android:text="Email"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="120dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCadastra"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="94dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
+    <Button
+        android:id="@+id/buttonCadastra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data Nasc.:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="294dp" />
-
-    <EditText
-        android:id="@+id/editText13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="354dp" />
-
+        android:text="cadastrar"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="185dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
