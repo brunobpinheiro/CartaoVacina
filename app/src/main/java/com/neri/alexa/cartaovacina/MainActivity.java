@@ -15,11 +15,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btnTelaCadastro =  (Button) findViewById(R.id.buttonCadastro);
+        Button btnTelaImc = (Button) findViewById(R.id.buttonImc);
 
         btnTelaCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,CadastroActivity.class);
+                Intent intent = new Intent(MainActivity.this,CadastroActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        btnTelaImc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ImcActivity.class);
                 startActivity(intent);
             }
         });
