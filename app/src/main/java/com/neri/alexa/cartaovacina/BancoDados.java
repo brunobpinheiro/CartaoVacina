@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 
 /**
@@ -28,12 +27,10 @@ public class BancoDados extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
        String sql  =  "CREATE TABLE "+TABELA+" ( "+
-               " "+ID+" interger primary key autoincrement, " +
+               " " + ID + " integer primary key autoincrement, " +
                " "+NOME+" text, " +EMAIL+ " text );";
 
        db.execSQL(sql);
-
-
     }
 
     @Override
@@ -54,9 +51,5 @@ public class BancoDados extends SQLiteOpenHelper{
         retornoBD = getWritableDatabase().insert(TABELA, null, values);
 
         return  retornoBD;
-
     }
-
-
 }
-
