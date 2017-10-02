@@ -15,8 +15,6 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText editEmail;
     private Usuario usuario;
     private BancoDados banco;
-    private long retorno;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,26 +25,23 @@ public class CadastroActivity extends AppCompatActivity {
         editNome = (EditText) findViewById(R.id.editTextName);
         editEmail = (EditText) findViewById(R.id.editTextEmail);
 
-        Intent i = getIntent();
-
-        usuario = new Usuario();
-        banco = new BancoDados(CadastroActivity.this);
 
         btnCadastra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-              usuario.setNome(  editNome.getText().toString());
-              usuario.setNome( editEmail.getText().toString());
+                setUsuario(new Usuario());
+                setBanco(new BancoDados());
 
-                retorno = banco.salvaUsuario(usuario);
+                getUsuario().setNome(  editNome.getText().toString());
+                getUsuario().setEmail(editEmail.getText().toString());
 
-                if (retorno == -1) {
-                    alert("erro ao cadastra");
+
+                if (getBanco().salvaUsuario(getUsuario())) {
+                    alert("erro ao cadastrar");
                 } else {
                    alert("sucesso");
                 }
-
             }
         });
 
@@ -57,5 +52,21 @@ public class CadastroActivity extends AppCompatActivity {
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
      }
 
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public BancoDados getBanco() {
+        return banco;
+    }
+
+    public void setBanco(BancoDados banco) {
+        this.banco = banco;
+    }
 
 }
